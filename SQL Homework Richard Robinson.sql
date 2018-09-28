@@ -6,7 +6,7 @@ select first_name, last_name from actor;
 
 
 SELECT concat(first_name," ", last_name) as Actor_Name
-from actor
+from actor;
 
 ##select column from table
 
@@ -31,7 +31,7 @@ WHERE last_name LIKE '%LI%';
 #2d. Using IN, display the country_id and country columns of the following countries: Afghanistan, Bangladesh, and China:
 SELECT country_id, country
 FROM country
-WHERE country IN ('Afghanistan', 'Bangladesh', 'China')
+WHERE country IN ('Afghanistan', 'Bangladesh', 'China');
 
 #3a. You want to keep a description of each actor.
 USE sakila;
@@ -45,12 +45,12 @@ MODIFY middle_name BLOB;
 ALTER TABLE actor
 DROP COLUMN middle_name;
 
-SELECT * FROM actor
+SELECT * FROM actor;
 
 #4a
 SELECT last_name, COUNT(last_name) AS "Count of Last Name"
 FROM actor
-GROUP BY last_name
+GROUP BY last_name;
 
 #4B
 SELECT last_name, COUNT(last_name) AS "Count of Last Name"
@@ -80,7 +80,7 @@ WHERE first_name = 'GROUCHO' AND last_name = 'WILLIAMS';
  
  #5a. You cannot  the schema of the address table. Which query would you use to re-create it?
 
-SHOW CREATE TABLE address
+SHOW CREATE TABLE address;
 
 #6a. Use JOIN to display the first and last names, as well as the address, of each staff member. Use the tables staff and address
 SELECT address, first_name, last_name
